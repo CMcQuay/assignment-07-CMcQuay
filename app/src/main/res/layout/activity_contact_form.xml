@@ -9,7 +9,7 @@
         android:id="@+id/saveBtn"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:style="@style/AppTheme.ContactForm.Button"
+        style="@style/AppTheme.ContactForm.Button"
         android:text="@string/save_button_label"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +25,8 @@
         android:hint="@string/website_hint"
         android:theme="@style/AppTheme.ContactForm.EditText"
         app:layout_constraintStart_toEndOf="@+id/iconName"
-        app:layout_constraintTop_toBottomOf="@+id/textInputAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputAddress"
+        android:singleLine="true"/>
 
     <ImageView
         android:id="@+id/iconWebsite"
@@ -47,7 +48,8 @@
         android:hint="@string/address_hint"
         android:theme="@style/AppTheme.ContactForm.EditText"
         app:layout_constraintStart_toEndOf="@+id/iconName"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputEmail"
+        android:singleLine="true"/>
 
     <ImageView
         android:id="@+id/iconAddress"
@@ -69,7 +71,8 @@
         android:hint="@string/email_hint"
         android:theme="@style/AppTheme.ContactForm.EditText"
         app:layout_constraintStart_toEndOf="@+id/iconName"
-        app:layout_constraintTop_toBottomOf="@+id/textInputPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputPhone"
+        android:singleLine="true"/>
 
     <ImageView
         android:id="@+id/iconEmail"
@@ -91,7 +94,8 @@
         android:hint="@string/phone_hint"
         android:theme="@style/AppTheme.ContactForm.EditText"
         app:layout_constraintStart_toEndOf="@+id/iconName"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLastName" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLastName"
+        android:singleLine="true"/>
 
     <ImageView
         android:theme="@style/AppTheme.ImageView"
@@ -113,7 +117,8 @@
         android:hint="@string/last_name_hint"
         android:theme="@style/AppTheme.ContactForm.EditText"
         app:layout_constraintStart_toEndOf="@+id/iconName"
-        app:layout_constraintTop_toBottomOf="@+id/textInputFirstName" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputFirstName"
+        android:singleLine="true"/>
 
     <ImageView
         android:theme="@style/AppTheme.ImageView"
@@ -135,6 +140,7 @@
         android:hint="@string/first_name_hint"
         android:theme="@style/AppTheme.ContactForm.EditText"
         app:layout_constraintStart_toEndOf="@+id/iconName"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:singleLine="true"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
