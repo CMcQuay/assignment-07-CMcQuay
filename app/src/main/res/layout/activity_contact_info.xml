@@ -1,6 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/textViewWebsite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="No listed website"
+        android:theme="@style/AppTheme.ContactInfo.TextView"
+        app:layout_constraintStart_toEndOf="@+id/iconEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalDivider3" />
+
+    <ImageView
+        android:id="@+id/iconAddress2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_public_black_24dp"
+        android:theme="@style/AppTheme.ImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewWebsite" />
+
+    <View
+        android:id="@+id/horizontalDivider4"
+        style="@style/AppTheme.ContactInfo.HorizontalDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWebsite" />
+
+    <ImageView
+        android:id="@+id/iconAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_place_black_24dp"
+        android:theme="@style/AppTheme.ImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewAddress" />
+
+    <View
+        android:id="@+id/horizontalDivider3"
+        style="@style/AppTheme.ContactInfo.HorizontalDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddress" />
+
+    <TextView
+        android:id="@+id/textViewAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="No listed address"
+        android:theme="@style/AppTheme.ContactInfo.TextView"
+        app:layout_constraintStart_toEndOf="@+id/iconEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalDivider" />
+
+    <ImageView
+        android:id="@+id/iconEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_email_black_24dp"
+        android:theme="@style/AppTheme.ImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewEmail" />
+
+    <View
+        android:id="@+id/horizontalDivider"
+        style="@style/AppTheme.ContactInfo.HorizontalDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="No listed email address"
+        android:theme="@style/AppTheme.ContactInfo.TextView"
+        app:layout_constraintStart_toEndOf="@+id/iconEmailAddress"
+        app:layout_constraintTop_toTopOf="@+id/horizontalDivider2" />
+
+    <ImageView
+        android:id="@+id/iconNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_phone_black_24dp"
+        android:theme="@style/AppTheme.ImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewNumber" />
+
+    <TextView
+        android:id="@+id/textViewNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="No listed phone number"
+        android:theme="@style/AppTheme.ContactInfo.TextView"
+        app:layout_constraintStart_toEndOf="@+id/iconNumber"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+    <View
+        android:id="@+id/horizontalDivider2"
+        style="@style/AppTheme.ContactInfo.HorizontalDivider"
+        android:layout_width="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNumber" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName">
+
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/callChip"
+                style="@style/AppTheme.ContactInfo.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/ic_phone_black_24dp"
+                android:buttonTint="@color/colorPrimary"
+                android:checkable="false"
+                android:text="@string/call_button_label" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/textChip"
+                style="@style/AppTheme.ContactInfo.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/ic_textsms_black_24dp"
+                android:buttonTint="@color/colorPrimary"
+                android:text="@string/text_button_label" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/emailChip"
+                style="@style/AppTheme.ContactInfo.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/ic_email_black_24dp"
+                android:buttonTint="@color/colorPrimary"
+                android:text="@string/email_button_label" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/mapChip"
+                style="@style/AppTheme.ContactInfo.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/ic_directions_black_24dp"
+                android:buttonTint="@color/colorPrimary"
+                android:text="@string/directions_button_label" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/webChip"
+                style="@style/AppTheme.ContactInfo.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/ic_public_black_24dp"
+                android:buttonTint="@color/colorPrimary"
+                android:checkable="false"
+                android:text="@string/call_button_label" />
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/contactThumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/ic_person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Unknown Contact"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactThumbnail" />
 </androidx.constraintlayout.widget.ConstraintLayout>
