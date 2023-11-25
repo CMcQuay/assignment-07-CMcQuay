@@ -1,8 +1,9 @@
 package edu.ualr.intentsassignment.model;
-
+import android.os.Parcel;
+import android.os.Parcelable;
 // TODO 05. Modify the Contact class, so you can use it to exchange Contact data between ContactFormActivity and ContactInfoActivity
 
-public class Contact {
+public class Contact implements Parcelable{
     private String firstName;
     private String lastName;
     private String phoneNumber;
@@ -63,6 +64,43 @@ public class Contact {
 
     public void setWebsite(String website) {
         this.website = website;
+    }
+
+    // Parcelable implementation
+    protected Contact(Parcel in) {
+        firstName = in.readString();
+        lastName = in.readString();
+        phoneNumber = in.readString();
+        emailAddress = in.readString();
+        address = in.readString();
+        website = in.readString();
+    }
+
+    public static final Creator<Contact> CREATOR = new Creator<Contact>() {
+        @Override
+        public Contact createFromParcel(Parcel in) {
+            return new Contact(in);
+        }
+
+        @Override
+        public Contact[] newArray(int size) {
+            return new Contact[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(firstName);
+        dest.writeString(lastName);
+        dest.writeString(phoneNumber);
+        dest.writeString(emailAddress);
+        dest.writeString(address);
+        dest.writeString(website);
     }
 
 }
